@@ -1,16 +1,16 @@
-import tw from 'tailwind-styled-components';
+import tw from 'tailwind-styled-components'
 
 export const TitleCard = tw.span<{ colorWeight: string }>`
     text-sm
     font-medium
     text-slate-${({ colorWeight }) => colorWeight}
-`;
+`
 
 export const ContentCard = tw.p`
     text-sm
     leading-6
     text-slate-400
-`;
+`
 
 export const GradientCard = tw.div`
     absolute 
@@ -22,4 +22,4 @@ export const GradientCard = tw.div`
     from-black/60 
     to-black/0 
     pointer-events-none
-`;
+`

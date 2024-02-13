@@ -1,4 +1,4 @@
-import tw from 'tailwind-styled-components';
+import tw from 'tailwind-styled-components'
 import * as Dialog from '@radix-ui/react-dialog'
 
 export const DialogTrigger = tw(Dialog.Trigger)`
@@ -15,7 +15,7 @@ export const DialogTrigger = tw(Dialog.Trigger)`
     hover:ring-slate-600 
     focus-visible:ring-2 
     focus-visible:ring-lime-400
-`;
+`
 
 export const ContainerModal = tw.div`
     flex-1 
@@ -23,19 +23,19 @@ export const ContainerModal = tw.div`
     flex-col 
     gap-3 
     p-5
-`;
+`
 
 export const TitleModal = tw.span`
     text-sm 
     font-medium 
     text-slate-300
-`;
+`
 
 export const ContentModal = tw.p`
     text-sm 
     leading-6 
     text-slate-400
-`;
+`
 
 export const ButtonSave = tw.button`
     w-full 
@@ -47,9 +47,9 @@ export const ButtonSave = tw.button`
     outline-none 
     font-medium 
     group
-`;
+`
 
 export const TextButton = tw.span`
     text-red-400 
     group-hover:underline
-`;
+`

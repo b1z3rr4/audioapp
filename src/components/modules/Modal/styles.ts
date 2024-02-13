@@ -1,12 +1,12 @@
-import tw from 'tailwind-styled-components';
-import * as Dialog from "@radix-ui/react-dialog";
-import { X } from 'lucide-react';
+import tw from 'tailwind-styled-components'
+import * as Dialog from '@radix-ui/react-dialog'
+import { X } from 'lucide-react'
 
 export const DialogOverlay = tw(Dialog.Overlay)`
     inset-0
     fixed
     bg-black/60
-`;
+`
 
 export const DialogContent = tw(Dialog.Content)`
     fixed 
@@ -25,7 +25,7 @@ export const DialogContent = tw(Dialog.Content)`
     flex 
     flex-col 
     outline-none
-`;
+`
 
 export const DialogClose = tw(Dialog.Close)`
     absolute 
@@ -35,6 +35,6 @@ export const DialogClose = tw(Dialog.Close)`
     p-1.5 
     text-slate-400 
     hover:text-slate-100
-`;
+`
 
-export const CloseIcon = tw(X)`size-5`;
+export const CloseIcon = tw(X)`size-5`

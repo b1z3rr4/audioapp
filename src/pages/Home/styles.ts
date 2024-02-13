@@ -1,4 +1,4 @@
-import tw from 'tailwind-styled-components';
+import tw from 'tailwind-styled-components'
 
 export const HomeContainer = tw.div`
     mx-auto
@@ -6,12 +6,12 @@ export const HomeContainer = tw.div`
     my-12 
     space-y-6 
     px-5
-`;
+`
 
 export const Divisor = tw.div`
     h-px 
     bg-slate-700
-`;
+`
 
 export const ContainerGrid = tw.div`
     grid 
@@ -20,6 +20,6 @@ export const ContainerGrid = tw.div`
     lg:grid-cols-3 
     gap-6 
     auto-rows-[250px]
-`;
+`
 
-export const Image = tw.img``;
+export const Image = tw.img``

@@ -1,6 +1,6 @@
-import tw from 'tailwind-styled-components';
+import tw from 'tailwind-styled-components'
 
-export const Form = tw.form`w-full`;
+export const Form = tw.form`w-full`
 
 export const Input = tw.input`
     w-full 
@@ -10,4 +10,4 @@ export const Input = tw.input`
     tracking-tight 
     outline-none 
     placeholder:text-slate-500
-`;
+`
