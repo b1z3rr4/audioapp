@@ -51,7 +51,7 @@ Este repositório serve como uma referência simples de código React, demonstra
 
 ## Autora
 
-Este projeto foi desenvolvido por Natalia Bezerra.
+Este projeto foi desenvolvido por [Natalia Bezerra](https://www.linkedin.com/in/natalia-bezerra-437575229/).
 
 ## Créditos
 
