@@ -55,4 +55,4 @@ Este projeto foi desenvolvido por Natalia Bezerra.
 
 ## Créditos
 
-Este projeto foi inspirado e desenvolvido como parte do NLW Expert da Rocketseat. Saiba mais em [www.rocketseat.com.br](https://www.rocketseat.com.br).
+Este projeto foi desenvolvido como parte do NLW Expert da Rocketseat. Saiba mais em [www.rocketseat.com.br](https://www.rocketseat.com.br).
