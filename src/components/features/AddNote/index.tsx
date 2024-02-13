@@ -2,6 +2,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { Card } from '../../modules/Card';
 import { Modal } from '../../modules/Modal';
 import { useAddNote } from './hook';
+import { AnimationRecording, ButtonRecording, ButtonSave, ContainerEditor, ContentModal, DialogTrigger, Form, TextAreaModal, TextButton, TitleModal } from './styles';
 
 export interface AddNoteProps {
     onNoteCreated: (content: string) => void;
@@ -21,61 +22,56 @@ export const AddNote = ({ onNoteCreated }: AddNoteProps) => {
 
     return (
         <Dialog.Root>
-            <Dialog.Trigger className="rounded-md bg-slate-700 p-5 space-y-3 flex flex-col gap-3 text-left outline-none hover:ring-2 hover:ring-slate-600 focus-visible:ring-2 focus-visible:ring-lime-400" >
+            <DialogTrigger>
                 <Card 
                     content={'Grave uma nota em áudio que será convertida para texto automaticamente.'} 
                     variant={'normal'} 
                     titleColorIntense={'200'} 
                     titleCard={'Adicionar nota'} 
                 />
-            </Dialog.Trigger>
+            </DialogTrigger>
             <Modal>
-                <form className="flex-1 flex flex-col">
-                    <div className="flex-1 flex flex-col gap-3 p-5">
-                        <span className="text-sm font-medium text-slate-300">Adicionar nota</span>
-
+                <Form>
+                    <ContainerEditor>
+                        <TitleModal>Adicionar nota</TitleModal>
                         {shouldShowOnboarding ? 
                             (
-                                <p className="text-sm leading-6 text-slate-400">
-                                    Comece <button onClick={handleStartRecording} type="button" className="font-medium text-lime-400 hover:underline">gravando uma nota</button> em áudio ou se preferir <button className="font-medium text-lime-400" type="button" onClick={handleStartEditor}>utilize apenas texto</button>.
-                                </p>
+                                <ContentModal>
+                                    Comece <TextButton onClick={handleStartRecording} type="button">gravando uma nota</TextButton> em áudio ou se preferir <TextButton type="button" onClick={handleStartEditor}>utilize apenas texto</TextButton>.
+                                </ContentModal>
                             ) 
                             : 
                             (
-                                <textarea 
-                                    autoFocus 
-                                    className="text-sm leading-6 text-slate-400 bg-transparent resize-none flex-1 outline-none"
+                                <TextAreaModal 
+                                    autoFocus
                                     onChange={handleContentChange}
                                     value={content}
                                 />
                             )
                         }
-                    </div>
-
+                    </ContainerEditor>
                     {
                         isRecording ?
                             (
-                                <button 
+                                <ButtonRecording 
                                     type="button"
-                                    className="w-full flex items-center justify-center gap-2 bg-slate-900 py-4 text-center text-sm text-slate-300 outline-none font-medium hover:text-slate-100"
                                     onClick={handleStopRecording}
                                 >
-                                    <div className="size-3 rounded-full bg-red-500 animate-pulse" />
-                                    Gravando! (clique para finalizar)
-                                </button>
+                                    <AnimationRecording />
+                                    Gravando! (clique aqui para finalizar)
+                                </ButtonRecording>
                             )
                             :
                             (
-                                <button 
+                                <ButtonSave 
                                     type="button"
-                                    className="w-full bg-lime-400 py-4 text-center text-sm text-lime-950 outline-none font-medium hover:bg-lime-500"
                                     onClick={handleSaveNote}
                                 >
                                     Salvar nota
-                                </button>
+                                </ButtonSave>
                             )
                     }
-                </form>
+                </Form>
             </Modal>
         </Dialog.Root>
     );

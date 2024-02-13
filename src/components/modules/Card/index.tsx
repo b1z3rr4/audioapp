@@ -1,3 +1,5 @@
+import { ContentCard, GradientCard, TitleCard } from "./styles";
+
 interface CardProps {
     content: string;
     variant: 'gradient' | 'normal';
@@ -8,17 +10,13 @@ interface CardProps {
 export const Card = ({ content, variant, titleColorIntense, titleCard }: CardProps) => {
     return (
         <>
-            <span className={`text-sm font-medium text-slate-${titleColorIntense}`}>{titleCard}</span>
-
-            <p className="text-sm leading-6 text-slate-400">
+            <TitleCard colorWeight={titleColorIntense}>{titleCard}</TitleCard>
+            <ContentCard>
                 {content} 
-            </p>
-
+            </ContentCard>
             {
                 variant === 'gradient' && 
-                    <div 
-                        className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/60 to-black/0 pointer-events-none" 
-                    />
+                    <GradientCard />
             }
         </>
     );

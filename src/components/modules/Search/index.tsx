@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import { Form, Input } from "./styles";
 
 interface SearchProps {
     handleSearch: (e: ChangeEvent<HTMLInputElement>) => void;
@@ -6,13 +7,12 @@ interface SearchProps {
 
 export const Search = ({ handleSearch }: SearchProps) => {
     return (
-        <form className="w-full">
-            <input 
+        <Form>
+            <Input 
               type="text" 
               placeholder='Busque em suas notas...'
-              className="w-full bg-transparent text-3xl font-semibold tracking-tight outline-none placeholder:text-slate-500"
               onChange={handleSearch}
             />
-        </form>
+        </Form>
     );
 };
