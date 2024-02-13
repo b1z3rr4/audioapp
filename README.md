@@ -47,7 +47,7 @@ Este repositório serve como uma referência simples de código React, demonstra
    yarn run dev
    ```
 
-2. Abra o navegador e acesse `http://localhost:3000` para visualizar a aplicação em execução.
+2. Abra o navegador e acesse `http://localhost:5173` para visualizar a aplicação em execução.
 
 ## Autora
 
