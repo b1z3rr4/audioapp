@@ -73,7 +73,7 @@ export const useNotes = () => {
     // Filtra as notas com base na string de pesquisa
     const filteredNotes = useMemo(() => 
       isValidSearchString
-        ? notes.filter(note => note.content.toLocaleLowerCase().includes(search.toLocaleLowerCase())) 
+        ? notes.filter(note => note.content.toLocaleLowerCase().search(search.toLocaleLowerCase()) !== -1) 
         : notes,
     [isValidSearchString, notes, search]);
 
