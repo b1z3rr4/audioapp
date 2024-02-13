@@ -20,13 +20,13 @@ Este repositório serve como uma referência simples de código React, demonstra
 1. Clone este repositório para o seu ambiente local.
    
    ```bash
-   git clone https://github.com/seu-usuario/audio-notes.git
+   git clone https://github.com/b1z3rr4/audioapp.git
    ```
 
 2. Navegue até o diretório do projeto no terminal.
 
    ```bash
-   cd audio-notes
+   cd audioapp
    ```
 
 3. Execute o comando abaixo para instalar as dependências do projeto.
