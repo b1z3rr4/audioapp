@@ -1,18 +1,19 @@
 import * as Dialog from '@radix-ui/react-dialog'
+import { guid } from '../../../utils/guid'
 import { Card } from '../../modules/Card'
 import { Modal } from '../../modules/Modal'
 import { useAddNote } from './hook'
 import {
-    AnimationRecording,
-    ButtonRecording,
-    ButtonSave,
-    ContainerEditor,
-    ContentModal,
-    DialogTrigger,
-    Form,
-    TextAreaModal,
-    TextButton,
-    TitleModal,
+  AnimationRecording,
+  ButtonRecording,
+  ButtonSave,
+  ContainerEditor,
+  ContentModal,
+  DialogTrigger,
+  Form,
+  TextAreaModal,
+  TextButton,
+  TitleModal,
 } from './styles'
 
 export interface AddNoteProps {
@@ -31,6 +32,7 @@ export const AddNote = ({ onNoteCreated }: AddNoteProps) => {
     handleStopRecording,
   } = useAddNote({ onNoteCreated })
 
+
   return (
     <Dialog.Root>
       <DialogTrigger>
@@ -43,7 +45,7 @@ export const AddNote = ({ onNoteCreated }: AddNoteProps) => {
           titleCard={'Adicionar nota'}
         />
       </DialogTrigger>
-      <Modal>
+      <Modal key={guid()}>
         <Form>
           <ContainerEditor>
             <TitleModal>Adicionar nota</TitleModal>

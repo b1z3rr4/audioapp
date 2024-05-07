@@ -1,6 +1,7 @@
 import { AddNote } from '../../../../components/features/AddNote'
 import { ViewNote } from '../../../../components/features/ViewNote'
 import { Note } from '../../../../infra/interfaces'
+import { guid } from '../../../../utils/guid'
 import { ContainerGrid } from '../../styles'
 
 interface GridNotesProps {
@@ -16,7 +17,7 @@ export const GridNotes = ({
 }: GridNotesProps) => {
   return (
     <ContainerGrid>
-      <AddNote onNoteCreated={onNoteCreated} />
+      <AddNote onNoteCreated={onNoteCreated} key={guid()}/>
 
       {filteredNotes?.map((note) => (
         <ViewNote note={note} key={note.id} onNoteDeleted={onNoteDeleted} />

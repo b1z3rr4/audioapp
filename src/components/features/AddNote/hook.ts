@@ -18,7 +18,7 @@ export const useAddNote = ({ onNoteCreated }: AddNoteProps) => {
   const [content, setContent] = useState<string>('')
 
   // Estado para controlar se a gravação de voz está ativa
-  const [isRecording, setIsRecording] = useState(true)
+  const [isRecording, setIsRecording] = useState(false)
 
   // Obtém a instância de reconhecimento de fala e verifica se a API de reconhecimento de fala está disponível
   const { isSpeechRecognizeAPIAvailable, speechRecognition } =
